@@ -53,7 +53,7 @@ mavolc = ggplot(ma_both_all, aes(x = log2FC.x, y = -log10(pval.x), color = Valid
 
 #plot barplot
 both_bar = ggplot(rbind(fran_validation_sig[,c("Feature", "Label")], ma_validation_sig[,c("Feature", "Label")]), aes(x = Label, fill = Label)) +
-  geom_bar() + xlab("Number of validated discoveries") + ylab("Count") + scale_fill_manual(values=c("darkblue", "darkred"))
+  geom_bar() + xlab("Number of validated discoveries") + ylab("Count") + scale_fill_manual(values=c("darkblue", "darkred")) + theme_bw()
 
 
 #Try to create some kind of tree?
